@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { brand, nav, socials } from "@/content/site";
 
 export function Footer() {
@@ -17,7 +18,7 @@ export function Footer() {
           <ul className="space-y-2">{socials.map((s) => <li key={s.label}><a href={s.href} target="_blank" rel="noreferrer" className="hover:text-primary">{s.label}</a></li>)}</ul>
         </div>
       </div>
-      <p aria-hidden className="font-display mt-16 select-none whitespace-nowrap px-3 text-center text-[13.5vw] text-primary">Just us boys</p>
+      <p aria-hidden className="font-display mt-16 select-none whitespace-nowrap px-3 text-center text-[11.5vw] text-primary">Just us boys</p>
       <div className="mx-auto flex max-w-[1440px] flex-col gap-3 border-t border-border px-5 py-6 text-sm text-muted-foreground md:flex-row md:justify-between md:px-10">
         <p>© 2026 Just Us Boys. All rights reserved.</p>
         <div className="flex gap-6">

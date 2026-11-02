@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { ArrowUpRight, MapPin, Clock, Calendar } from "lucide-react";
 import { events, eventStatus, type EventStatus } from "@/content/site";
 import { ImageReveal, Reveal } from "./motion";

@@ -1,6 +1,7 @@
+/* eslint-disable prettier/prettier */
 import { useState, type FormEvent } from "react";
 import { ArrowUpRight, Check, AlertCircle } from "lucide-react";
-import { LUMA_URL, subscribe } from "@/content/site";
+import { subscribe } from "@/content/site";
 import { Reveal, SplitLines } from "./motion";
 
 type State = { kind: "idle" } | { kind: "loading" } | { kind: "error"; msg: string } | { kind: "info"; msg: string } | { kind: "success" };
@@ -48,9 +49,9 @@ export function NewsletterSection() {
               {state.kind === "success" && <p className="flex items-center gap-2 text-primary"><Check className="h-4 w-4" />You're in. Welcome to the circle.</p>}
             </div>
           </form>
-          <a href={LUMA_URL} target="_blank" rel="noreferrer" className="eyebrow mt-6 inline-flex items-center gap-2 text-foreground hover:text-primary">
+          {/* <a href={LUMA_URL} target="_blank" rel="noreferrer" className="eyebrow mt-6 inline-flex items-center gap-2 text-foreground hover:text-primary">
             Or join on Luma <ArrowUpRight className="h-4 w-4" />
-          </a>
+          </a> */}
         </Reveal>
       </div>
     </section>

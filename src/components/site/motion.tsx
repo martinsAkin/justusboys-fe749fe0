@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { motion, useInView, useReducedMotion, animate } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 

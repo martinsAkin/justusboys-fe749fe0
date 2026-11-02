@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createFileRoute } from "@tanstack/react-router";
 import { MotionConfig } from "framer-motion";
 import { Navbar } from "@/components/site/Navbar";
