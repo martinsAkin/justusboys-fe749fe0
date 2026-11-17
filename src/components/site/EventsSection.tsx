@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { ArrowUpRight, MapPin, Clock, Calendar } from "lucide-react";
-import { events, eventStatus, type EventStatus } from "@/content/site";
+import { events, eventStatus, WA_COMMUNITY_URL, type EventStatus } from "@/content/site";
 import { ImageReveal, Reveal } from "./motion";
 
 const statusLabel: Record<EventStatus, string> = {
@@ -22,7 +22,7 @@ export function EventsSection() {
         <div className="grid grid-cols-12 gap-5 border-b border-border pb-12">
           <div className="col-span-12 md:col-span-8">
             <p className="eyebrow mb-6 text-primary">{hasUpcoming ? "Upcoming" : "Gatherings"}</p>
-            <h2 className="font-display text-6xl md:text-8xl xl:text-9xl">Events &amp;<br />gatherings</h2>
+            <h2 className="font-display text-4xl tracking-wide md:text-8xl xl:text-9xl">Events &amp;<br />gatherings</h2>
           </div>
           <p className="font-display col-span-12 self-end text-2xl text-primary md:col-span-4 md:text-right md:text-3xl">Come through.<br />No tie needed.</p>
         </div>
@@ -39,7 +39,7 @@ export function EventsSection() {
                     <span className={`eyebrow inline-block rounded-full px-3 py-1.5 ${status === "upcoming" ? "bg-primary text-primary-foreground" : "border border-border text-muted-foreground"}`}>
                       {statusLabel[status]}
                     </span>
-                    <h3 className="font-display mt-6 text-5xl md:text-7xl">{e.title}</h3>
+                    <h3 className="font-display mt-6 text-2xl md:text-7xl">{e.title}</h3>
                     {status === "past" && <p className="mt-4 text-cream-soft">Where it started — a community highlight from our first gathering.</p>}
                   </div>
                   <dl className="grid grid-cols-1 gap-px bg-border sm:grid-cols-3">
@@ -63,7 +63,7 @@ export function EventsSection() {
           })}
         </ol>
         {!hasUpcoming && (
-          <p className="mt-10 text-muted-foreground">New gatherings are announced to the circle first. <a href="#join" className="text-primary underline underline-offset-4">Stay in the loop</a>.</p>
+          <p className="mt-10 text-muted-foreground">New gatherings are announced to the circle first. <a href={WA_COMMUNITY_URL} className="text-primary underline underline-offset-4">Stay in the loop</a>.</p>
         )}
       </div>
     </section>

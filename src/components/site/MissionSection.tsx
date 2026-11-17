@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 import { images } from "@/content/site";
 import { ImageReveal, Reveal, SplitLines } from "./motion";
 
 export function MissionSection() {
   return (
-    <section id="story" className="grain overflow-hidden py-24 md:py-36">
+    <section id="story" className="grain overflow-hidden py-24 md:py-30">
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-5 px-5 md:px-10">
         <div className="col-span-12 lg:col-span-7">
           <p className="eyebrow mb-8 flex items-center gap-3 text-primary"><span className="h-px w-10 bg-primary" />Our mission</p>
-          <h2 className="font-display text-[14vw] md:text-8xl xl:text-[8.5rem]">
+          <h2 className="font-display text-[12vw] md:text-7xl xl:text-[8rem]">
             <SplitLines lines={["We built", "something", <span key="d" className="text-outline">different.</span>]} />
           </h2>
           <div className="mt-14 grid gap-8 md:grid-cols-2 md:gap-10">

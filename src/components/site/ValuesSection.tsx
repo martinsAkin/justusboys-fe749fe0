@@ -26,7 +26,7 @@ export function ValuesSection() {
                   <span className="font-display text-outline text-7xl md:text-9xl">{p.n}</span>
                   <span className="eyebrow mt-3 text-ink-soft">Pillar</span>
                 </div>
-                <h3 className="font-display mt-4 text-5xl transition-colors group-hover:text-primary md:text-6xl">{p.title}</h3>
+                <h3 className="font-display mt-4 text-4xl transition-colors group-hover:text-primary md:text-6xl">{p.title}</h3>
                 <motion.div variants={{ hover: { width: "100%" } }} initial={{ width: "3rem" }} className="mt-5 h-1 bg-primary" />
                 <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">{p.text}</p>
               </motion.article>

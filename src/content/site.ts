@@ -2,11 +2,24 @@
 // Central, editable brand content for Just Us Boys Africa.
 import logo from "@/assets/white.png";
 import flyer from "@/assets/lineup.jpeg";
-import img09 from "@/assets/image_09.png.asset.json";
-import boysDay from "@/assets/boys-day.jpg.asset.json";
 import hero from "@/assets/hero.jpg";
-import mission from "@/assets/mission.jpg";
+import mission from "@/assets/connection.jpg";
 import circle from "@/assets/panel.jpeg";
+import gallery1 from "@/assets/gallery (1).jpeg";
+import gallery1b from "@/assets/gallery (1).jpg";
+import gallery2 from "@/assets/gallery (2).jpeg";
+import gallery2b from "@/assets/gallery (2).jpg";
+import gallery3 from "@/assets/gallery (3).jpeg";
+import gallery3b from "@/assets/gallery (3).jpg";
+import gallery4 from "@/assets/gallery (4).jpeg";
+import gallery4b from "@/assets/gallery (4).jpg";
+import gallery5 from "@/assets/gallery (5).jpeg";
+import gallery6 from "@/assets/gallery (6).jpeg";
+import gallery7 from "@/assets/gallery (7).jpeg";
+import gallery8 from "@/assets/gallery (8).jpeg";
+import gallery9 from "@/assets/gallery9.jpeg";
+
+
 
 export const WA_COMMUNITY_URL = "https://chat.whatsapp.com/KxeSILPI6LYF4ZLDhvW6wZ?s=cl&p=i&mlu=4&ilr=4&iam=2";
 
@@ -78,8 +91,19 @@ export function eventStatus(e: Pick<CommunityEvent, "date" | "fallbackStatus">, 
 }
 
 export const gallery = [
-  { src: boysDay.url, alt: "Just Us Boys community members on Boys Day", w: 1024, h: 1280 },
-  { src: img09.url, alt: "Just Us Boys community gathering", w: 512, h: 341 },
+  { src: gallery1, alt: "Just Us Boys community gathering", w: 1024, h: 1280 },
+  { src: gallery1b, alt: "Just Us Boys community gathering", w: 512, h: 341 },
+  { src: gallery2, alt: "Just Us Boys community members on Boys Day", w: 512, h: 1000 },
+  { src: gallery2b, alt: "Just Us Boys community members on Boys Day", w: 512, h: 1000 },
+  { src: gallery3, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery3b, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery4, alt: "Just Us Boys community members on Boys Day", w: 512, h: 1000 },
+  { src: gallery4b, alt: "Just Us Boys community members on Boys Day", w: 512, h: 1000 },
+  { src: gallery5, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery6, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery7, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery8, alt: "Just Us Boys community gathering", w: 512, h: 300 },
+  { src: gallery9, alt: "Just Us Boys community gathering", w: 512, h: 300 },
 ];
 
 export const socials = [

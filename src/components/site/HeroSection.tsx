@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
-import { images, LUMA_URL, WA_COMMUNITY_URL } from "@/content/site";
+import { images, WA_COMMUNITY_URL } from "@/content/site";
 import { SplitLines, ease } from "./motion";
 
 export function HeroSection() {
@@ -27,7 +27,7 @@ export function HeroSection() {
           </motion.p>
         </div>
 
-        <h1 className="font-display relative z-10 col-span-12 mt-6 text-[17vw] md:text-[7.5vw] xl:text-[7.5rem]">
+        <h1 className="font-display relative z-10 col-span-12 mt-6 text-[10vw] md:text-[7.5vw] xl:text-[7.5rem]">
           No pressure. {""}
           Just direction.
         </h1>
@@ -43,7 +43,7 @@ export function HeroSection() {
           <motion.img
             style={{ y }}
             src={images.hero}
-            alt="Young Nigerian men laughing together on steps in Lagos at sunset"
+            alt="Happy men standing together, smiling and laughing, with their arms around each other."
             width={1600}
             height={1104}
             className="h-[118%] w-full object-cover object-[50%_35%]"

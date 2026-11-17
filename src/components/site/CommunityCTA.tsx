@@ -15,7 +15,7 @@ export function CommunityCTA() {
       <div className="absolute inset-0 bg-black/75" />
       <div className="relative z-10 mx-auto flex min-h-[90vh] max-w-[1440px] flex-col justify-center px-5 py-24 md:px-10">
         <p className="eyebrow mb-8 text-primary">An open invitation</p>
-        <h2 className="font-display text-[15vw] md:text-[10vw] xl:text-[10rem]">
+        <h2 className="font-display text-[12vw] md:text-[10vw] xl:text-[8rem]">
           <SplitLines lines={["Ready to", "find your", <span key="c" className="text-primary">circle?</span>]} />
         </h2>
         <Reveal delay={0.3} className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">

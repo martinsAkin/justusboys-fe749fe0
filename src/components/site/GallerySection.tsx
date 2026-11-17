@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, Plus } from "lucide-react";
@@ -17,28 +18,58 @@ export function GallerySection() {
 
   return (
     <section className="bg-paper py-24 text-ink md:py-36">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10">
+       <div className="mx-auto max-w-[1440px] px-5 md:px-10">
         <div className="grid grid-cols-12 gap-5">
-          <h2 className="font-display col-span-12 text-[13vw] md:col-span-8 md:text-8xl xl:text-9xl">
-            <SplitLines lines={["Grow together.", <span key="g" className="text-primary">Go further.</span>]} />
-          </h2>
           <Reveal className="col-span-12 self-end md:col-span-4">
-            <p className="font-display text-2xl">Nobody does life alone here.</p>
+            <p className="font-display text-3xl">Nobody does life alone here.</p>
             <p className="mt-3 text-ink-soft">Step into a community of men who are growing, learning and showing up for each other every day.</p>
           </Reveal>
         </div>
+     <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-12 mx-0 md:mx-20">
+        {gallery.map((g, i) => (
+          <Reveal
+            key={g.src}
+            delay={i * 0.1}
+            className={
+              [
+                "md:col-span-4", // 1
+                "md:col-span-4", // 2
+                "md:col-span-4", // 3
+                "md:col-span-5 md:col-start-2", // 4
+                "md:col-span-5", // 5
+                "md:col-span-4", // 6
+                "md:col-span-4", // 7
+                "md:col-span-4", // 8
+                "md:col-span-5 md:col-start-2", // 9
+                "md:col-span-5", // 10
+              ][i % 10]
+            }
+          >
+            <button
+              onClick={() => setOpen(i)}
+              aria-label={`Open image: ${g.alt}`}
+              className="group relative block aspect-[4/3] h-full w-full overflow-hidden rounded-sm"
+            >
+              <img
+                src={g.src}
+                alt={g.alt}
+                loading="lazy"
+                width={g.w}
+                height={g.h}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
 
-        <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-12">
-          {gallery.map((g, i) => (
-            <Reveal key={g.src} delay={i * 0.1} className={spans[i % spans.length]}>
-              <button onClick={() => setOpen(i)} aria-label={`Open image: ${g.alt}`} className="group relative block h-full w-full overflow-hidden rounded-sm">
-                <img src={g.src} alt={g.alt} loading="lazy" width={g.w} height={g.h} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"><Plus className="h-5 w-5" /></span>
-                <span className="eyebrow absolute left-4 top-4 rounded-full bg-paper/85 px-3 py-1.5 text-ink">From the community</span>
-              </button>
-            </Reveal>
-          ))}
-        </div>
+              <span className="absolute bottom-4 right-4 grid h-11 w-11 place-items-center rounded-full bg-primary text-primary-foreground opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                <Plus className="h-5 w-5" />
+              </span>
+
+              <span className="eyebrow absolute left-4 top-4 rounded-full bg-paper/85 px-3 py-1.5 text-ink">
+                From the community
+              </span>
+            </button>
+          </Reveal>
+        ))}
+      </div>
       </div>
 
       <AnimatePresence>

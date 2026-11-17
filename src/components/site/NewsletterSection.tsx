@@ -18,15 +18,15 @@ export function NewsletterSection() {
     setState({ kind: "loading" });
     const r = await subscribe(v);
     if (r.ok) setState({ kind: "success" });
-    else if (r.reason === "not-configured") setState({ kind: "info", msg: "Our mailing list isn't open yet — your email was not saved. Join the circle on Luma to stay connected for now." });
+    else if (r.reason === "not-configured") setState({ kind: "info", msg: "Our mailing list isn't open yet — your email was not saved. Join the WhatsApp Community to stay connected for now." });
     else setState({ kind: "error", msg: "Something went wrong. Please try again." });
   }
 
   return (
-    <section id="join" className="grain py-24 md:py-36">
+    <section id="join" className="grain py-20 md:py-26">
       <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-5 px-5 md:px-10">
         <h2 className="font-display col-span-12 text-[13vw] md:text-8xl lg:col-span-7 xl:text-9xl">
-          <SplitLines lines={["There's a", "place for", <span key="y" className="text-primary">you here.</span>]} />
+          <span key="y" className="text-primary">There's a place for you here.</span>
         </h2>
         <Reveal className="col-span-12 self-end lg:col-span-5">
           <p className="text-lg text-cream-soft">Join the circle. Stay connected to upcoming gatherings, community experiences, and conversations that matter.</p>
@@ -49,9 +49,6 @@ export function NewsletterSection() {
               {state.kind === "success" && <p className="flex items-center gap-2 text-primary"><Check className="h-4 w-4" />You're in. Welcome to the circle.</p>}
             </div>
           </form>
-          {/* <a href={LUMA_URL} target="_blank" rel="noreferrer" className="eyebrow mt-6 inline-flex items-center gap-2 text-foreground hover:text-primary">
-            Or join on Luma <ArrowUpRight className="h-4 w-4" />
-          </a> */}
         </Reveal>
       </div>
     </section>
